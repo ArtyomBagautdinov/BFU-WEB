@@ -6,6 +6,8 @@ services:
             context: ./docker/php
         ports:
             - 9000:9000
+        expose:
+            - 9000
         volumes:
             - ./:/var/www/app
             - ./docker/php/conf/www.conf:/usr/local/etc/php-fpm.d/www.conf
